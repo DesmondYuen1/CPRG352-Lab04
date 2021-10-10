@@ -25,6 +25,7 @@ public class NoteServlet extends HttpServlet {
         BufferedReader br = new BufferedReader(new FileReader(new File(path)));
         String title = br.readLine();
         String contents = br.readLine();
+        br.close();
         
         note.setTitle(title);
         note.setContents(contents);
